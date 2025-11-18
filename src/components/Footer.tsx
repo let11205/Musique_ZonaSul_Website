@@ -30,7 +30,7 @@ const Footer = () => {
                 className="text-background/80 hover:text-primary hover:bg-primary/10"
                 asChild
               >
-                <a href="https://instagram.com/musiquezonasul" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/musique.zonasul?igsh=MTBja3Z2encwdmZvcQ==" target="_blank" rel="noopener noreferrer">
                   <Instagram className="w-5 h-5" />
                   <span className="sr-only">Instagram</span>
                 </a>
@@ -41,7 +41,7 @@ const Footer = () => {
                 className="text-background/80 hover:text-primary hover:bg-primary/10"
                 asChild
               >
-                <a href="https://youtube.com/@musiquezonasul" target="_blank" rel="noopener noreferrer">
+                <a href="https://youtube.com/@estudiomusique6418?si=mKox6nlZ4_JhIzFW" target="_blank" rel="noopener noreferrer">
                   <Youtube className="w-5 h-5" />
                   <span className="sr-only">YouTube</span>
                 </a>
