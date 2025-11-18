@@ -76,12 +76,12 @@ const Navigation = () => {
                     Cursos
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[280px] grid-cols-2 gap-1 p-3 bg-background shadow-lg border">
+                    <ul className="w-[200px] p-2 bg-background shadow-lg border">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
                             to="/cursos/violao"
-                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             Violão
                           </Link>
@@ -91,7 +91,7 @@ const Navigation = () => {
                         <NavigationMenuLink asChild>
                           <Link
                             to="/cursos/guitarra"
-                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             Guitarra
                           </Link>
@@ -101,7 +101,7 @@ const Navigation = () => {
                         <NavigationMenuLink asChild>
                           <Link
                             to="/cursos/baixo"
-                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             Baixo
                           </Link>
@@ -111,7 +111,7 @@ const Navigation = () => {
                         <NavigationMenuLink asChild>
                           <Link
                             to="/cursos/teclado"
-                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             Teclado
                           </Link>
@@ -121,7 +121,7 @@ const Navigation = () => {
                         <NavigationMenuLink asChild>
                           <Link
                             to="/cursos/musicalizacao"
-                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             Musicalização
                           </Link>
@@ -131,7 +131,7 @@ const Navigation = () => {
                         <NavigationMenuLink asChild>
                           <Link
                             to="/cursos/canto"
-                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
                           >
                             Canto
                           </Link>
