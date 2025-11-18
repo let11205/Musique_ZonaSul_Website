@@ -108,7 +108,7 @@ const ScheduleSection = () => {
             <div className="bg-muted/50 p-6 rounded-lg">
               <h3 className="font-semibold mb-2 text-secondary">🎯 Sem Compromisso</h3>
               <p className="text-sm text-muted-foreground">
-                Nossa aula gratuita não gera nenhuma obrigação. Venha conhecer nossa escola e descubra se é o ambiente ideal para seu aprendizado musical.
+                Nossa aula gratuita é um convite. Venha sentir a vibração da Musique e descobrir se este é o palco certo para você.
               </p>
             </div>
           </div>
