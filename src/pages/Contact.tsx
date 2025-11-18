@@ -19,6 +19,7 @@ import {
   MessageCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-contato.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -78,26 +79,21 @@ const Contact = () => {
       <Navigation />
       
       <main>
-        {/* Breadcrumb */}
-        <section className="bg-muted/30 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex items-center space-x-2 text-sm">
-              <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                <Home className="w-4 h-4" />
-              </Link>
-              <ChevronRight className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground font-medium">Contato</span>
-            </nav>
-          </div>
-        </section>
-
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        <section className="relative py-32 overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={heroImage} 
+              alt="Contato Musique Zona Sul"
+              className="w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Entre em <span className="gradient-text">Contato</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Estamos aqui para esclarecer suas dúvidas e ajudar você a dar o primeiro passo na sua jornada musical.
             </p>
           </div>
