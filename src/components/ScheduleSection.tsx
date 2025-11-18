@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Music, Send, Star } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ScheduleSection = () => {
   const { toast } = useToast();
@@ -54,45 +55,26 @@ const ScheduleSection = () => {
 
     setIsLoading(true);
 
-    // Formatar a mensagem para o WhatsApp
-    const message = `Novo agendamento recebido pelo site Musique.
-Nome: ${formData.nome}
-Idade: ${formData.idade}
-E-mail: ${formData.email}
-WhatsApp do aluno: ${formData.whatsapp}
-Modalidade de interesse: ${formData.modalidade}
-Turno preferido: ${formData.turno}
-Mensagem adicional: ${formData.mensagem || 'Nenhuma'}
-Enviado diretamente pelo Formulário de Agendamento.`;
-
-    // Criar URL do WhatsApp
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5551989228808&text=${encodeURIComponent(message)}`;
-
-    // Log para debug
-    console.log('WhatsApp URL:', whatsappUrl);
-    console.log('Dados do formulário:', formData);
-
-    // Abrir WhatsApp - tentar múltiplas vezes se necessário
-    const opened = window.open(whatsappUrl, '_blank');
-    
-    if (!opened || opened.closed) {
-      toast({
-        title: "Popup bloqueado!",
-        description: "Seu navegador bloqueou o WhatsApp. Clique no ícone de popup na barra de endereço e permita popups para este site.",
-        variant: "destructive",
+    try {
+      // Chamar a edge function para enviar os e-mails
+      const { data, error } = await supabase.functions.invoke('send-schedule-email', {
+        body: formData
       });
-      setIsLoading(false);
-      return;
-    }
 
-    // Mostrar mensagem de sucesso
-    toast({
-      title: "✅ WhatsApp aberto!",
-      description: "IMPORTANTE: Clique no botão verde 'ENVIAR' no WhatsApp para confirmar seu agendamento.",
-    });
+      if (error) {
+        console.error('Erro ao enviar e-mails:', error);
+        throw error;
+      }
 
-    // Aguardar um pouco antes de limpar o formulário
-    setTimeout(() => {
+      console.log('E-mails enviados com sucesso:', data);
+
+      // Mostrar mensagem de sucesso
+      toast({
+        title: "✅ Agendamento enviado com sucesso!",
+        description: "Você receberá uma confirmação no e-mail informado e retornaremos pelo WhatsApp em breve.",
+      });
+
+      // Limpar formulário
       setFormData({
         nome: "",
         idade: "",
@@ -102,8 +84,17 @@ Enviado diretamente pelo Formulário de Agendamento.`;
         turno: "",
         mensagem: ""
       });
+
+    } catch (error: any) {
+      console.error('Erro completo:', error);
+      toast({
+        title: "Erro ao enviar agendamento",
+        description: "Tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
