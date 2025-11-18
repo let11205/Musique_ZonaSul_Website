@@ -77,7 +77,7 @@ const Teclado = () => {
                 O curso de teclado da Musique combina prática instrumental, percepção musical e compreensão harmônica. O aluno aprende acordes, ritmos, leitura, improvisação simples, estilos variados e acompanhamento.
               </p>
               <p>
-                A metodologia é flexível e respeita o ritmo do aluno — desde iniciantes até quem já toca e deseja evoluir.
+                A metodologia é flexível e respeita o ritmo do aluno, desde iniciantes até quem já toca e deseja evoluir.
               </p>
             </div>
 
