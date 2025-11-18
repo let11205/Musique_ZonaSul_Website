@@ -73,8 +73,8 @@ Enviado diretamente pelo Formulário de Agendamento.`;
 
     // Mostrar mensagem de sucesso
     toast({
-      title: "Seu agendamento foi enviado!",
-      description: "Você será redirecionado para o WhatsApp.",
+      title: "Redirecionando para o WhatsApp...",
+      description: "Clique em 'Enviar' no WhatsApp para confirmar seu agendamento. Se o WhatsApp não abrir, verifique se seu navegador bloqueou o popup.",
     });
 
     // Limpar formulário
