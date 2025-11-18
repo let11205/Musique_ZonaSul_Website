@@ -59,7 +59,7 @@ const Violao = () => {
           </p>
           <Button size="lg" className="pulse-gold" onClick={scrollToForm}>
             <Music className="w-5 h-5 mr-2" />
-            Agende sua aula experimental e dê o primeiro passo para evoluir no violão!
+            Agende a sua aula experimental
           </Button>
         </div>
       </section>
