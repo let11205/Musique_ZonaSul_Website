@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Guitar, Music2, Mic, Baby, Piano, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Import course images
 import bassImage from "@/assets/bass-course.jpg";
@@ -11,55 +12,58 @@ import kidsImage from "@/assets/kids-music-course.jpg";
 import keyboardImage from "@/assets/keyboard-course.jpg";
 
 const CoursesSection = () => {
+  const navigate = useNavigate();
+  
   const courses = [
     {
       title: "Baixo",
       description: "Domine as técnicas fundamentais do baixo elétrico e desenvolva seu groove único.",
       image: bassImage,
       icon: Music2,
-      color: "text-secondary"
+      color: "text-secondary",
+      route: "/cursos/baixo"
     },
     {
       title: "Violão",
       description: "Aprenda desde acordes básicos até técnicas avançadas de violão popular e clássico.",
       image: guitarImage,
       icon: Guitar,
-      color: "text-primary"
+      color: "text-primary",
+      route: "/cursos/violao"
     },
     {
       title: "Guitarra",
       description: "Explore diferentes estilos e técnicas na guitarra elétrica com equipamentos profissionais.",
       image: electricGuitarImage,
       icon: Zap,
-      color: "text-secondary"
+      color: "text-secondary",
+      route: "/cursos/guitarra"
     },
     {
       title: "Canto",
       description: "Desenvolva sua voz com técnicas de respiração, projeção e interpretação vocal.",
       image: vocalImage,
       icon: Mic,
-      color: "text-primary"
+      color: "text-primary",
+      route: "/cursos/canto"
     },
     {
       title: "Musicalização Infantil",
       description: "Introdução lúdica à música para crianças através de jogos e atividades criativas.",
       image: kidsImage,
       icon: Baby,
-      color: "text-secondary"
+      color: "text-secondary",
+      route: "/cursos/musicalizacao"
     },
     {
       title: "Teclado",
       description: "Aprenda piano e teclado com repertório diversificado e teoria musical aplicada.",
       image: keyboardImage,
       icon: Piano,
-      color: "text-primary"
+      color: "text-primary",
+      route: "/cursos/teclado"
     }
   ];
-
-  const scrollToForm = () => {
-    const element = document.getElementById('agendamento');
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section id="cursos" className="py-20 bg-muted/30">
@@ -107,9 +111,9 @@ const CoursesSection = () => {
                   <Button 
                     variant="outline" 
                     className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
-                    onClick={scrollToForm}
+                    onClick={() => navigate(course.route)}
                   >
-                    Experimente Agora
+                    Ver Detalhes
                   </Button>
                 </CardContent>
               </Card>
