@@ -55,7 +55,7 @@ const About = () => {
 
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    A <strong className="text-foreground">Musique Zona Sul</strong> nasceu do sonho de democratizar o ensino musical em Porto Alegre. Fundada há mais de 10 anos, nossa escola surgiu da paixão de músicos profissionais que acreditam no poder transformador da música.
+                    A Musique Zona Sul nasceu do sonho de democratizar o ensino musical em Porto Alegre. Fundada há mais de 10 anos, nossa escola surgiu da paixão de músicos profissionais que acreditam no poder transformador da música.
                   </p>
                   
                   <p>
