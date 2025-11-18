@@ -76,7 +76,7 @@ const Navigation = () => {
                     Cursos
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                    <ul className="grid w-[450px] gap-2 p-4 md:w-[550px] md:grid-cols-2 lg:grid-cols-3">
                       {courseItems.map((course) => (
                         <li key={course.href}>
                           <NavigationMenuLink asChild>
