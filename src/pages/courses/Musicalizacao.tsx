@@ -111,7 +111,7 @@ const Musicalizacao = () => {
                   Cada aula trabalha canto, ritmo, expressão corporal, reconhecimento sonoro e coordenação motora.
                 </p>
                 <p>
-                  A metodologia fortalece criatividade, socialização, autoestima e atenção — preparando o aluno para qualquer instrumento no futuro.
+                  A metodologia fortalece criatividade, socialização, autoestima e atenção, preparando o aluno para qualquer instrumento no futuro.
                 </p>
               </div>
             </div>
