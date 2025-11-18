@@ -76,21 +76,67 @@ const Navigation = () => {
                     Cursos
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] grid-cols-2 gap-2 p-4 bg-background">
-                      {courseItems.map((course) => (
-                        <li key={course.href}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={course.href}
-                              className={cn(
-                                "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                              )}
-                            >
-                              <div className="text-sm font-medium leading-none">{course.label}</div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
+                    <ul className="grid w-[280px] grid-cols-2 gap-1 p-3 bg-background shadow-lg border">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/cursos/violao"
+                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          >
+                            Violão
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/cursos/guitarra"
+                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          >
+                            Guitarra
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/cursos/baixo"
+                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          >
+                            Baixo
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/cursos/teclado"
+                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          >
+                            Teclado
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/cursos/musicalizacao"
+                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          >
+                            Musicalização
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/cursos/canto"
+                            className="block select-none rounded-md p-2.5 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                          >
+                            Canto
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
