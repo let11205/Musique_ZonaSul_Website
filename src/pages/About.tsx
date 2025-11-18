@@ -34,16 +34,15 @@ const About = () => {
               alt="Alunos e professores da Musique Zona Sul em recital"
               className="w-full h-full object-cover object-center"
             />
+            <div className="absolute inset-0 bg-black/60"></div>
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bg-background/90 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Sobre a <span className="gradient-text">Musique Zona Sul</span>
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Conheça nossa história, nossa paixão pela música e o que nos motiva a formar novos talentos todos os dias.
-              </p>
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+              Sobre a <span className="gradient-text">Musique Zona Sul</span>
+            </h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Conheça nossa história, nossa paixão pela música e o que nos motiva a formar novos talentos todos os dias.
+            </p>
           </div>
         </section>
 
