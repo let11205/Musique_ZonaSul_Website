@@ -59,7 +59,7 @@ const Guitarra = () => {
           </p>
           <Button size="lg" className="pulse-gold" onClick={scrollToForm}>
             <Music className="w-5 h-5 mr-2" />
-            Agende sua Aula Experimental
+            Agende a sua Aula Experimental
           </Button>
         </div>
       </section>
