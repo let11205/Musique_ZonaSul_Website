@@ -13,19 +13,6 @@ const About = () => {
       <Navigation />
       
       <main>
-        {/* Breadcrumb */}
-        <section className="bg-muted/30 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex items-center space-x-2 text-sm">
-              <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                <Home className="w-4 h-4" />
-              </Link>
-              <ChevronRight className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground font-medium">Sobre a Escola</span>
-            </nav>
-          </div>
-        </section>
-
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden">
           <div className="absolute inset-0">
