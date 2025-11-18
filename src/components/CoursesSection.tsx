@@ -111,7 +111,10 @@ const CoursesSection = () => {
                   <Button 
                     variant="outline" 
                     className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
-                    onClick={() => navigate(course.route)}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      navigate(course.route);
+                    }}
                   >
                     Ver Detalhes
                   </Button>
