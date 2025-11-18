@@ -108,7 +108,7 @@ const Violao = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  No curso de violão, o aluno explora diferentes estilos musicais — do pop ao MPB, rock, sertanejo e fingerstyle. As aulas combinam teoria aplicada, exercícios práticos e estudos que fortalecem coordenação, precisão e fluidez.
+                  No curso de violão, o aluno explora diferentes estilos musicais, do pop ao MPB, rock, sertanejo e fingerstyle. As aulas combinam teoria aplicada, exercícios práticos e estudos que fortalecem coordenação, precisão e fluidez.
                 </p>
                 <p>
                   O professor acompanha sua evolução de perto, adaptando cada passo à sua necessidade para garantir confiança desde os primeiros acordes até arranjos completos.
