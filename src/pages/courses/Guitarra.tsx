@@ -12,12 +12,12 @@ const Guitarra = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Aulas de Guitarra – Técnica e Performance | Musique Zona Sul";
+    document.title = "Aulas de Guitarra – Técnica, Estilo e Performance | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Aprenda guitarra elétrica na Musique Zona Sul. Técnicas de rock, blues, metal e mais. Solos, riffs e improvisação com professores especializados. Agende sua aula!"
+        "Aprenda guitarra na Musique. Curso de guitarra completo do básico ao avançado com solos, riffs e improvisação. Agende sua aula experimental!"
       );
     }
   }, []);
@@ -27,11 +27,11 @@ const Guitarra = () => {
   };
 
   const benefits = [
-    "Técnicas de palhetada avançada",
-    "Improvisação e solos",
-    "Diversos estilos musicais",
-    "Equipamentos profissionais",
-    "Acompanhamento individualizado"
+    "Ensino moderno e dinâmico",
+    "Técnicas avançadas (bends, ligados, improvisação)",
+    "Metodologia adaptável ao seu nível",
+    "Diversos estilos (rock, blues, pop, metal, funk)",
+    "Aprofundamento técnico e estilístico"
   ];
 
   return (

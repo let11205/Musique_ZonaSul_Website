@@ -12,12 +12,12 @@ const Teclado = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Aulas de Teclado – Harmonia e Criatividade | Musique Zona Sul";
+    document.title = "Aulas de Teclado – Técnica, Harmonia e Criatividade | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Aprenda teclado e piano na Musique Zona Sul. Do básico aos acordes modernos com técnica, harmonia e criatividade. Aulas personalizadas em Porto Alegre. Agende já!"
+        "Aprenda teclado na Musique. Do básico aos acordes modernos com técnica, harmonia e criatividade. Curso completo e personalizado. Agende sua aula experimental!"
       );
     }
   }, []);
@@ -27,11 +27,11 @@ const Teclado = () => {
   };
 
   const benefits = [
-    "Técnica pianística sólida",
-    "Harmonia funcional aplicada",
-    "Improvisação e criatividade",
-    "Leitura musical",
-    "Metodologia flexível"
+    "Prática instrumental e percepção musical",
+    "Acordes, ritmos e leitura",
+    "Improvisação e harmonia funcional",
+    "Metodologia flexível e adaptável",
+    "Autonomia para tocar sozinho ou em banda"
   ];
 
   return (
