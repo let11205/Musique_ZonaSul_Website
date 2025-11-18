@@ -38,7 +38,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Musique <onboarding@resend.dev>",
-        to: ["contato@musique.com.br"], // Substitua pelo e-mail real da escola
+        to: ["let548501@gmail.com"],
         subject: `Novo Agendamento - ${nome}`,
         html: `
           <h1>Novo agendamento recebido pelo site Musique</h1>
