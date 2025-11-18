@@ -46,45 +46,12 @@ const About = () => {
           </div>
         </section>
 
-        {/* Internal Menu */}
-        <section className="py-8 bg-background border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-center space-x-8">
-              <a 
-                href="#quem-somos" 
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('quem-somos')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Quem Somos
-              </a>
-              <a 
-                href="#metodologia" 
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('metodologia')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Metodologia
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Who We Are Section */}
         <section id="quem-somos" className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">Quem Somos</h2>
-                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Quem Somos</h2>
 
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                   <p>
@@ -168,11 +135,6 @@ const About = () => {
         <section className="py-20 bg-gradient-to-br from-secondary/10 via-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Heart className="w-8 h-8 text-primary" />
-                </div>
-              </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 O Que Dizem <span className="gradient-text">Nossos Alunos</span>
               </h2>
@@ -306,12 +268,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 rounded-full bg-secondary/10">
-                    <Target className="w-8 h-8 text-secondary" />
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">Nossa Metodologia</h2>
-                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Nossa Metodologia</h2>
 
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                   <p>
