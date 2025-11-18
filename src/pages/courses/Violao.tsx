@@ -59,7 +59,7 @@ const Violao = () => {
           </p>
           <Button size="lg" className="pulse-gold" onClick={scrollToForm}>
             <Music className="w-5 h-5 mr-2" />
-            Agende a sua aula experimental
+            Agende a sua Aula Experimental
           </Button>
         </div>
       </section>
