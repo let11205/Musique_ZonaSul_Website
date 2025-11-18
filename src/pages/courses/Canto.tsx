@@ -134,7 +134,7 @@ const Canto = () => {
             Dê Voz ao seu <span className="gradient-text">Talento</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Agende sua aula experimental e dê voz ao seu talento!
+            Agende sua aula experimental e descubra seu verdadeiro potencial vocal.
           </p>
           <Button size="lg" className="pulse-gold text-lg px-8 py-6" onClick={scrollToForm}>
             <Music className="w-5 h-5 mr-2" />
