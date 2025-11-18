@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       <Navigation />
       
       <main>
