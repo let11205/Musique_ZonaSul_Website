@@ -50,7 +50,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <img src={logo} alt="Musique Zona Sul" className="h-8 w-8" />
             <div className="hidden sm:block">
-              <h1 className="text-base font-semibold text-foreground">Musique Zona Sul</h1>
+              <h1 className="text-base font-semibold gradient-text">Musique Zona Sul</h1>
             </div>
           </Link>
 
