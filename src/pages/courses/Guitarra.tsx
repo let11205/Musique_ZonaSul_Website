@@ -105,7 +105,7 @@ const Guitarra = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  As aulas trabalham repertórios variados — rock, blues, pop, metal, funk, soul e fusion — permitindo que o aluno evolua dentro de seu estilo favorito. Cada exercício é pensado para desenvolver musicalidade, precisão e presença sonora.
+                  As aulas trabalham repertórios variados: rock, blues, pop, metal, funky e soul, permitindo que o aluno evolua dentro de seu estilo favorito. Cada exercício é pensado para desenvolver musicalidade, precisão e presença sonora.
                 </p>
                 <p>
                   O professor acompanha o processo de forma individualizada, garantindo evolução real e contínua.
