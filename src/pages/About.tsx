@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { ChevronRight, Home, Music, Users, Target, Award, Mic2 } from "lucide-react";
+import { ChevronRight, Home, Music, Users, Target, Award, Mic2, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import recitalImage from "@/assets/recital-musique.jpg";
 
 const About = () => {
   return (
@@ -148,6 +149,88 @@ const About = () => {
                     <div className="text-sm text-muted-foreground">Satisfação</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Separator />
+
+        {/* Community Section */}
+        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-full bg-secondary/10">
+                  <Heart className="w-8 h-8 text-secondary" />
+                </div>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Nossa <span className="gradient-text">Comunidade</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Muito mais que uma escola, somos uma família musical unida pela paixão pela arte
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src={recitalImage} 
+                  alt="Alunos e professores da Musique Zona Sul em recital"
+                  className="w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+
+              <div className="space-y-6">
+                <Card className="hover-lift border-secondary/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-full bg-secondary/10 flex-shrink-0">
+                        <Music className="w-6 h-6 text-secondary" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">Recitais e Apresentações</h3>
+                        <p className="text-muted-foreground">
+                          Realizamos recitais periódicos onde nossos alunos podem apresentar seu progresso, ganhar experiência de palco e celebrar suas conquistas junto com família e amigos.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover-lift border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
+                        <Users className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">Ambiente Acolhedor</h3>
+                        <p className="text-muted-foreground">
+                          Nossa escola proporciona um ambiente amigável e acolhedor onde alunos de todas as idades se sentem confortáveis para aprender, errar e crescer musicalmente.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover-lift border-secondary/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-full bg-secondary/10 flex-shrink-0">
+                        <Mic2 className="w-6 h-6 text-secondary" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">Professores Dedicados</h3>
+                        <p className="text-muted-foreground">
+                          Nossa equipe de professores é formada por músicos profissionais apaixonados pelo ensino, comprometidos com o desenvolvimento individual de cada aluno.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
