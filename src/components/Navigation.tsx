@@ -47,10 +47,10 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-1 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Musique Zona Sul" className="h-10 w-10" />
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <img src={logo} alt="Musique Zona Sul" className="h-8 w-8" />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold gradient-text">Musique Zona Sul</h1>
+              <h1 className="text-base font-semibold text-foreground">Musique Zona Sul</h1>
             </div>
           </Link>
 
