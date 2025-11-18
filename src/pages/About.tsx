@@ -27,25 +27,23 @@ const About = () => {
         </section>
 
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Sobre a <span className="gradient-text">Musique Zona Sul</span>
-                </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Conheça nossa história, nossa paixão pela música e o que nos motiva a formar novos talentos todos os dias.
-                </p>
-              </div>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl transform rotate-3"></div>
-                <img 
-                  src={recitalImage} 
-                  alt="Alunos e professores da Musique Zona Sul em recital"
-                  className="relative rounded-2xl shadow-2xl w-full h-auto"
-                />
-              </div>
+        <section className="relative py-32 overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={recitalImage} 
+              alt="Alunos e professores da Musique Zona Sul em recital"
+              className="w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-background"></div>
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                Sobre a <span className="text-primary">Musique Zona Sul</span>
+              </h1>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+                Conheça nossa história, nossa paixão pela música e o que nos motiva a formar novos talentos todos os dias.
+              </p>
             </div>
           </div>
         </section>
