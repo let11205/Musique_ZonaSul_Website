@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   ChevronRight, 
   Home, 
@@ -54,24 +55,36 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
 
-    toast({
-      title: "Mensagem enviada com sucesso! ✨",
-      description: "Entraremos em contato em breve. Obrigado pelo interesse!",
-    });
+      if (error) throw error;
 
-    // Reset form
-    setFormData({
-      nome: "",
-      email: "",
-      telefone: "",
-      assunto: "",
-      mensagem: ""
-    });
+      toast({
+        title: "Mensagem enviada com sucesso! ✨",
+        description: "Entraremos em contato em breve. Obrigado pelo interesse!",
+      });
 
-    setIsLoading(false);
+      // Reset form
+      setFormData({
+        nome: "",
+        email: "",
+        telefone: "",
+        assunto: "",
+        mensagem: ""
+      });
+    } catch (error) {
+      console.error("Erro ao enviar mensagem:", error);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Por favor, tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
