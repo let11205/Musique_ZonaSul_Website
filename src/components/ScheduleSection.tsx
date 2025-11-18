@@ -68,27 +68,42 @@ Enviado diretamente pelo Formulário de Agendamento.`;
     // Criar URL do WhatsApp
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5551989228808&text=${encodeURIComponent(message)}`;
 
-    // Abrir WhatsApp
-    window.open(whatsappUrl, '_blank');
+    // Log para debug
+    console.log('WhatsApp URL:', whatsappUrl);
+    console.log('Dados do formulário:', formData);
+
+    // Abrir WhatsApp - tentar múltiplas vezes se necessário
+    const opened = window.open(whatsappUrl, '_blank');
+    
+    if (!opened || opened.closed) {
+      toast({
+        title: "Popup bloqueado!",
+        description: "Seu navegador bloqueou o WhatsApp. Clique no ícone de popup na barra de endereço e permita popups para este site.",
+        variant: "destructive",
+      });
+      setIsLoading(false);
+      return;
+    }
 
     // Mostrar mensagem de sucesso
     toast({
-      title: "Redirecionando para o WhatsApp...",
-      description: "Clique em 'Enviar' no WhatsApp para confirmar seu agendamento. Se o WhatsApp não abrir, verifique se seu navegador bloqueou o popup.",
+      title: "✅ WhatsApp aberto!",
+      description: "IMPORTANTE: Clique no botão verde 'ENVIAR' no WhatsApp para confirmar seu agendamento.",
     });
 
-    // Limpar formulário
-    setFormData({
-      nome: "",
-      idade: "",
-      email: "",
-      whatsapp: "",
-      modalidade: "",
-      turno: "",
-      mensagem: ""
-    });
-
-    setIsLoading(false);
+    // Aguardar um pouco antes de limpar o formulário
+    setTimeout(() => {
+      setFormData({
+        nome: "",
+        idade: "",
+        email: "",
+        whatsapp: "",
+        modalidade: "",
+        turno: "",
+        mensagem: ""
+      });
+      setIsLoading(false);
+    }, 1000);
   };
 
   return (
