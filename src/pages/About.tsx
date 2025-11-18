@@ -26,13 +26,21 @@ const About = () => {
           </div>
         </section>
 
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        {/* Hero Section with Image */}
+        <section className="relative py-32 overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={recitalImage} 
+              alt="Alunos e professores da Musique Zona Sul em recital"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background"></div>
+          </div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Sobre a <span className="gradient-text">Musique Zona Sul</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Conheça nossa história, nossa paixão pela música e o que nos motiva a formar novos talentos todos os dias.
             </p>
           </div>
@@ -67,7 +75,7 @@ const About = () => {
         </section>
 
         {/* Who We Are Section */}
-        <section id="quem-somos" className="py-20">
+        <section id="quem-somos" className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -156,82 +164,137 @@ const About = () => {
 
         <Separator />
 
-        {/* Community Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gradient-to-br from-secondary/10 via-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-full bg-secondary/10">
-                  <Heart className="w-8 h-8 text-secondary" />
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Nossa <span className="gradient-text">Comunidade</span>
+                O Que Dizem <span className="gradient-text">Nossos Alunos</span>
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Muito mais que uma escola, somos uma família musical unida pela paixão pela arte
+                Depoimentos de quem vive a experiência Musique Zona Sul
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src={recitalImage} 
-                  alt="Alunos e professores da Musique Zona Sul em recital"
-                  className="w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="hover-lift bg-card/80 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4 text-primary">
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "A Musique transformou minha relação com a música. Os professores são incríveis e sempre me incentivam a superar meus limites. Hoje toco violão em apresentações e jamais imaginei chegar tão longe!"
+                  </p>
+                  <div>
+                    <p className="font-semibold text-foreground">Ana Carolina</p>
+                    <p className="text-sm text-muted-foreground">Aluna de Violão há 2 anos</p>
+                  </div>
+                </CardContent>
+              </Card>
 
-              <div className="space-y-6">
-                <Card className="hover-lift border-secondary/20">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-secondary/10 flex-shrink-0">
-                        <Music className="w-6 h-6 text-secondary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2">Recitais e Apresentações</h3>
-                        <p className="text-muted-foreground">
-                          Realizamos recitais periódicos onde nossos alunos podem apresentar seu progresso, ganhar experiência de palco e celebrar suas conquistas junto com família e amigos.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+              <Card className="hover-lift bg-card/80 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4 text-primary">
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "Meu filho começou na musicalização infantil e o desenvolvimento dele foi impressionante. Além de aprender música, melhorou a concentração e a coordenação. Recomendo muito a escola!"
+                  </p>
+                  <div>
+                    <p className="font-semibold text-foreground">Mariana Santos</p>
+                    <p className="text-sm text-muted-foreground">Mãe de aluno de Musicalização</p>
+                  </div>
+                </CardContent>
+              </Card>
 
-                <Card className="hover-lift border-primary/20">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-primary/10 flex-shrink-0">
-                        <Users className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2">Ambiente Acolhedor</h3>
-                        <p className="text-muted-foreground">
-                          Nossa escola proporciona um ambiente amigável e acolhedor onde alunos de todas as idades se sentem confortáveis para aprender, errar e crescer musicalmente.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+              <Card className="hover-lift bg-card/80 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4 text-primary">
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "Sempre quis aprender guitarra mas achava que era tarde demais. Na Musique descobri que nunca é tarde para realizar um sonho. A metodologia é excelente e já toco minhas músicas favoritas!"
+                  </p>
+                  <div>
+                    <p className="font-semibold text-foreground">Roberto Silva</p>
+                    <p className="text-sm text-muted-foreground">Aluno de Guitarra há 1 ano</p>
+                  </div>
+                </CardContent>
+              </Card>
 
-                <Card className="hover-lift border-secondary/20">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-full bg-secondary/10 flex-shrink-0">
-                        <Mic2 className="w-6 h-6 text-secondary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2">Professores Dedicados</h3>
-                        <p className="text-muted-foreground">
-                          Nossa equipe de professores é formada por músicos profissionais apaixonados pelo ensino, comprometidos com o desenvolvimento individual de cada aluno.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+              <Card className="hover-lift bg-card/80 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4 text-primary">
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "As aulas de canto me ajudaram a ganhar confiança e descobrir minha verdadeira voz. A professora é muito atenciosa e cria um ambiente super confortável para aprender."
+                  </p>
+                  <div>
+                    <p className="font-semibold text-foreground">Júlia Mendes</p>
+                    <p className="text-sm text-muted-foreground">Aluna de Canto há 6 meses</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-lift bg-card/80 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4 text-primary">
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "A estrutura da escola é ótima e o estúdio de gravação é um diferencial incrível. Poder gravar as músicas que aprendo nas aulas é uma experiência única!"
+                  </p>
+                  <div>
+                    <p className="font-semibold text-foreground">Pedro Oliveira</p>
+                    <p className="text-sm text-muted-foreground">Aluno de Teclado há 3 anos</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-lift bg-card/80 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4 text-primary">
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                    <Music className="w-5 h-5 fill-current" />
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "Escola com profissionais de altíssima qualidade. Minha filha adora as aulas e já apresentou em dois recitais. Estamos muito satisfeitos com todo o processo de aprendizado."
+                  </p>
+                  <div>
+                    <p className="font-semibold text-foreground">Fernanda Costa</p>
+                    <p className="text-sm text-muted-foreground">Mãe de aluna de Violão</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -239,7 +302,7 @@ const About = () => {
         <Separator />
 
         {/* Methodology Section */}
-        <section id="metodologia" className="py-20 bg-muted/20">
+        <section id="metodologia" className="py-20 bg-gradient-to-br from-background via-primary/5 to-secondary/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
