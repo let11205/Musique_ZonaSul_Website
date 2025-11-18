@@ -76,14 +76,14 @@ const Navigation = () => {
                     Cursos
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[450px] gap-2 p-4 md:w-[550px] md:grid-cols-2 lg:grid-cols-3">
+                    <ul className="grid w-[400px] grid-cols-2 gap-2 p-4 bg-background">
                       {courseItems.map((course) => (
                         <li key={course.href}>
                           <NavigationMenuLink asChild>
                             <Link
                               to={course.href}
                               className={cn(
-                                "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               )}
                             >
                               <div className="text-sm font-medium leading-none">{course.label}</div>
