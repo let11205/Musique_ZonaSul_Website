@@ -62,44 +62,10 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error(`Erro ao enviar e-mail para a escola: ${JSON.stringify(schoolEmailData)}`);
     }
 
-    // E-mail de confirmação para o aluno
-    const studentEmailResponse = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify({
-        from: "Musique <onboarding@resend.dev>",
-        to: [email],
-        subject: "Confirmação do seu agendamento – Musique",
-        html: `
-          <h1>Olá, ${nome}!</h1>
-          <p>Recebemos seu agendamento e entraremos em contato pelo WhatsApp em breve para finalizar sua aula experimental.</p>
-          <p><strong>Dados do seu agendamento:</strong></p>
-          <ul>
-            <li><strong>Modalidade:</strong> ${modalidade}</li>
-            <li><strong>Turno preferido:</strong> ${turno}</li>
-          </ul>
-          <p>Obrigado por escolher a Musique!</p>
-          <hr>
-          <p style="color: #666; font-size: 12px;">Escola Musique - Música que transforma vidas</p>
-        `,
-      }),
-    });
-
-    const studentEmailData = await studentEmailResponse.json();
-    console.log("E-mail de confirmação enviado para o aluno:", studentEmailData);
-
-    if (!studentEmailResponse.ok) {
-      throw new Error(`Erro ao enviar e-mail para o aluno: ${JSON.stringify(studentEmailData)}`);
-    }
-
     return new Response(
       JSON.stringify({ 
         success: true,
-        schoolEmail: schoolEmailData,
-        studentEmail: studentEmailData
+        schoolEmail: schoolEmailData
       }),
       {
         status: 200,
