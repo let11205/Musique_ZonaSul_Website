@@ -12,12 +12,12 @@ const Canto = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Aulas de Canto – Técnica Vocal e Interpretação | Musique Zona Sul";
+    document.title = "Aulas de Canto – Técnica Vocal, Interpretação e Confiança | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Aulas de canto na Musique Zona Sul em Porto Alegre. Desenvolva técnica vocal, interpretação e confiança. Professores especializados. Agende sua aula experimental!"
+        "Aulas de canto na Musique. Desenvolva técnica vocal, interpretação e confiança com saúde vocal e presença cênica. Agende sua aula experimental!"
       );
     }
   }, []);
@@ -27,11 +27,11 @@ const Canto = () => {
   };
 
   const benefits = [
-    "Técnica vocal saudável",
-    "Respiração e projeção",
-    "Interpretação artística",
-    "Extensão e afinação",
-    "Presença cênica"
+    "Técnica vocal, respiração e afinação",
+    "Dicção, extensão e projeção",
+    "Interpretação e presença cênica",
+    "Saúde vocal e consciência corporal",
+    "Repertório adaptado ao seu estilo"
   ];
 
   return (

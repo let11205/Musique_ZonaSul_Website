@@ -12,12 +12,12 @@ const Baixo = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Aulas de Baixo – Groove e Técnica | Musique Zona Sul";
+    document.title = "Aulas de Baixo – Groove, Técnica e Musicalidade | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Aprenda baixo elétrico na Musique Zona Sul em Porto Alegre. Desenvolva groove, técnica e musicalidade. Slap, tapping e mais. Agende sua aula experimental!"
+        "Aprenda baixo na Musique. Curso de baixo completo com groove, técnica e musicalidade. Slap, tapping e construção de linhas. Agende sua aula experimental!"
       );
     }
   }, []);
@@ -27,11 +27,11 @@ const Baixo = () => {
   };
 
   const benefits = [
-    "Desenvolvimento de groove sólido",
-    "Técnicas como slap e tapping",
-    "Consciência rítmica e harmônica",
-    "Repertório diversificado",
-    "Acompanhamento personalizado"
+    "Desenvolvimento de groove e pegada",
+    "Técnicas: pizzicato, slapping, tapping",
+    "Consciência rítmica e presença musical",
+    "Diversos estilos (pop, jazz, rock, funk, gospel)",
+    "Construção de linhas de baixo"
   ];
 
   return (

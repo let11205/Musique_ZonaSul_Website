@@ -20,7 +20,6 @@ const Navigation = () => {
   const navItems = [
     { href: "/", label: "Início" },
     { href: "/sobre", label: "Sobre a Escola" },
-    { href: "/contato", label: "Contato" },
   ];
 
   const courseItems = [
@@ -97,6 +96,15 @@ const Navigation = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+
+            <Link
+              to="/contato"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/contato") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              Contato
+            </Link>
           </div>
 
           {/* Mobile Navigation */}
@@ -141,6 +149,17 @@ const Navigation = () => {
                     </Link>
                   ))}
                 </div>
+
+                <Link
+                  to="/contato"
+                  className={`text-sm font-medium py-2 px-3 rounded-md transition-colors ${
+                    isActive("/contato")
+                      ? "bg-primary/10 text-primary"
+                      : "text-foreground hover:bg-accent"
+                  }`}
+                >
+                  Contato
+                </Link>
               </div>
             </SheetContent>
           </Sheet>

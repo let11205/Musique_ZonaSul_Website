@@ -12,12 +12,12 @@ const Violao = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Aulas de Violão – Do Zero ao Avançado | Musique Zona Sul";
+    document.title = "Aulas de Violão – Do Zero ao Avançado na Musique | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Aprenda violão na Musique Zona Sul em Porto Alegre. Aulas personalizadas de violão popular, MPB, fingerstyle e mais. Agende sua aula experimental gratuita!"
+        "Aprenda violão na Musique. Curso completo de violão do básico ao avançado. Técnica, repertório personalizado e evolução garantida. Agende sua aula experimental!"
       );
     }
   }, []);
@@ -27,11 +27,11 @@ const Violao = () => {
   };
 
   const benefits = [
-    "Técnica sólida desde o básico",
-    "Repertório personalizado",
-    "Teoria musical aplicada",
-    "Acompanhamento individualizado",
-    "Diversos estilos musicais"
+    "Base sólida com exercícios direcionados",
+    "Metodologia prática e evolutiva",
+    "Integração de técnica, ritmo e percepção",
+    "Ambiente leve e motivador",
+    "Evolução do básico ao avançado"
   ];
 
   return (
@@ -52,14 +52,14 @@ const Violao = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Aulas de Violão
-            <span className="block gradient-text mt-2">Do Zero ao Avançado</span>
+            <span className="block gradient-text mt-2">Do Zero ao Avançado na Musique</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl">
             Aprenda a tocar com segurança, musicalidade e expressão.
           </p>
           <Button size="lg" className="pulse-gold" onClick={scrollToForm}>
             <Music className="w-5 h-5 mr-2" />
-            Agende sua Aula Experimental
+            Agende sua aula experimental e dê o primeiro passo para evoluir no violão!
           </Button>
         </div>
       </section>

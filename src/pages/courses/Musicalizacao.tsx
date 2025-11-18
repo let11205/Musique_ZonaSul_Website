@@ -12,12 +12,12 @@ const Musicalizacao = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Musicalização Infantil – Aprendizado Lúdico | Musique Zona Sul";
+    document.title = "Musicalização Infantil e Juvenil – Aprendizado Lúdico e Criativo | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Musicalização infantil na Musique Zona Sul em Porto Alegre. Desenvolvimento musical, motor e cognitivo através de atividades lúdicas. Agende uma aula experimental!"
+        "Musicalização infantil na Musique. Desenvolvimento musical divertido para crianças e adolescentes. Atividades lúdicas e criativas. Agende uma aula experimental!"
       );
     }
   }, []);
@@ -27,11 +27,11 @@ const Musicalizacao = () => {
   };
 
   const benefits = [
-    "Desenvolvimento motor e cognitivo",
-    "Atividades lúdicas e criativas",
-    "Percepção musical aguçada",
-    "Socialização e autoestima",
-    "Preparação para instrumentos"
+    "Atividades lúdicas e jogos rítmicos",
+    "Desenvolvimento de percepção e ritmo",
+    "Coordenação motora e expressão",
+    "Ambiente acolhedor e estimulante",
+    "Preparação para qualquer instrumento"
   ];
 
   return (
