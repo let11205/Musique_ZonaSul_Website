@@ -293,9 +293,9 @@ const Contact = () => {
         <section className="py-20 bg-muted/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Como Chegar</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Como chegar?</h2>
               <p className="text-xl text-muted-foreground">
-                Estamos localizados na Zona Sul de Porto Alegre, com fácil acesso
+                Nossa escola fica na Zona Sul de Porto Alegre, em um ponto de fácil acesso para quem vem de diferentes bairros da região!
               </p>
             </div>
             
