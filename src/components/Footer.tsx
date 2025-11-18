@@ -15,9 +15,9 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-6">
-              <img src={logo} alt="Musique Zona Sul" className="h-8 w-8" />
+              <img src={logo} alt="Musique Zona Sul" className="h-6 w-6" />
               <div>
-                <h3 className="text-xl font-semibold text-primary">Musique Zona Sul</h3>
+                <h3 className="text-lg font-semibold text-primary">Musique Zona Sul</h3>
               </div>
             </Link>
             <p className="text-background/80 leading-relaxed mb-6">
