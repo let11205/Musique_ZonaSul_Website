@@ -14,10 +14,10 @@ const Footer = () => {
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center space-x-1 mb-6">
-              <img src={logo} alt="Musique Zona Sul" className="h-10 w-10" />
+            <Link to="/" className="flex items-center space-x-2 mb-6">
+              <img src={logo} alt="Musique Zona Sul" className="h-8 w-8" />
               <div>
-                <h3 className="text-2xl font-bold text-primary">Musique Zona Sul</h3>
+                <h3 className="text-lg font-semibold text-primary">Musique Zona Sul</h3>
               </div>
             </Link>
             <p className="text-background/80 leading-relaxed mb-6">
@@ -57,7 +57,7 @@ const Footer = () => {
                 to="/" 
                 className="block text-background/80 hover:text-primary transition-colors"
               >
-                Início
+                Home
               </Link>
               <Link 
                 to="/sobre" 
@@ -66,21 +66,17 @@ const Footer = () => {
                 Sobre a Escola
               </Link>
               <Link 
+                to="/cursos/violao" 
+                className="block text-background/80 hover:text-primary transition-colors"
+              >
+                Cursos
+              </Link>
+              <Link 
                 to="/contato" 
                 className="block text-background/80 hover:text-primary transition-colors"
               >
                 Contato
               </Link>
-              <a 
-                href="#agendamento" 
-                className="block text-background/80 hover:text-primary transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('agendamento')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Agendar Aula
-              </a>
             </nav>
           </div>
 
