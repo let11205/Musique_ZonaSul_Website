@@ -12,6 +12,7 @@ const Musicalizacao = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Musicalização Infantil e Juvenil – Aprendizado Lúdico e Criativo | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

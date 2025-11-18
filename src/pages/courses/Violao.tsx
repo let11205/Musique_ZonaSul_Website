@@ -12,6 +12,7 @@ const Violao = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Aulas de Violão – Do Zero ao Avançado na Musique | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

@@ -12,6 +12,7 @@ const Baixo = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Aulas de Baixo – Groove, Técnica e Musicalidade | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {

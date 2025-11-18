@@ -12,6 +12,7 @@ const Canto = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Aulas de Canto – Técnica Vocal, Interpretação e Confiança | Musique Zona Sul";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
