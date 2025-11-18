@@ -41,17 +41,43 @@ const ScheduleSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validação dos campos obrigatórios
+    if (!formData.nome || !formData.idade || !formData.email || !formData.whatsapp || !formData.modalidade || !formData.turno) {
+      toast({
+        title: "Campos obrigatórios",
+        description: "Por favor, preencha todos os campos marcados com *",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Formatar a mensagem para o WhatsApp
+    const message = `Novo agendamento recebido pelo site Musique.
+Nome: ${formData.nome}
+Idade: ${formData.idade}
+E-mail: ${formData.email}
+WhatsApp do aluno: ${formData.whatsapp}
+Modalidade de interesse: ${formData.modalidade}
+Turno preferido: ${formData.turno}
+Mensagem adicional: ${formData.mensagem || 'Nenhuma'}
+Enviado diretamente pelo Formulário de Agendamento.`;
 
+    // Criar URL do WhatsApp
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=5551989228808&text=${encodeURIComponent(message)}`;
+
+    // Abrir WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+    // Mostrar mensagem de sucesso
     toast({
-      title: "Aula agendada com sucesso! 🎵",
-      description: "Entraremos em contato em breve para confirmar sua aula gratuita.",
+      title: "Seu agendamento foi enviado!",
+      description: "Você será redirecionado para o WhatsApp.",
     });
 
-    // Reset form
+    // Limpar formulário
     setFormData({
       nome: "",
       idade: "",
