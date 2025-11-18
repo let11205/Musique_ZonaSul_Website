@@ -33,6 +33,11 @@ const Navigation = () => {
 
   const isActive = (href: string) => location.pathname === href;
 
+  const handleNavigation = (to: string) => {
+    window.scrollTo(0, 0);
+    navigate(to);
+  };
+
   const scrollToForm = () => {
     if (location.pathname !== '/') {
       navigate('/', { state: { scrollTo: 'agendamento' } });
@@ -47,25 +52,25 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <div onClick={() => handleNavigation("/")} className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer">
             <img src={logo} alt="Musique Zona Sul" className="h-8 w-8" />
             <div className="hidden sm:block">
               <h1 className="text-base font-bold gradient-text">Musique Zona Sul</h1>
             </div>
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
-              <Link
+              <div
                 key={item.href}
-                to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
+                onClick={() => handleNavigation(item.href)}
+                className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap cursor-pointer ${
                   isActive(item.href) ? "text-primary" : "text-foreground"
                 }`}
               >
                 {item.label}
-              </Link>
+              </div>
             ))}
             
             {/* Cursos Dropdown */}
@@ -80,62 +85,62 @@ const Navigation = () => {
                       <ul className="w-[200px] p-2 bg-background shadow-lg border">
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to="/cursos/violao"
-                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            <div
+                              onClick={() => handleNavigation("/cursos/violao")}
+                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer"
                             >
                               Violão
-                            </Link>
+                            </div>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to="/cursos/guitarra"
-                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            <div
+                              onClick={() => handleNavigation("/cursos/guitarra")}
+                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer"
                             >
                               Guitarra
-                            </Link>
+                            </div>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to="/cursos/baixo"
-                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            <div
+                              onClick={() => handleNavigation("/cursos/baixo")}
+                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer"
                             >
                               Baixo
-                            </Link>
+                            </div>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to="/cursos/teclado"
-                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            <div
+                              onClick={() => handleNavigation("/cursos/teclado")}
+                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer"
                             >
                               Teclado
-                            </Link>
+                            </div>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to="/cursos/musicalizacao"
-                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            <div
+                              onClick={() => handleNavigation("/cursos/musicalizacao")}
+                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer"
                             >
                               Musicalização
-                            </Link>
+                            </div>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <Link
-                              to="/cursos/canto"
-                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            <div
+                              onClick={() => handleNavigation("/cursos/canto")}
+                              className="block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground cursor-pointer"
                             >
                               Canto
-                            </Link>
+                            </div>
                           </NavigationMenuLink>
                         </li>
                       </ul>
@@ -145,14 +150,14 @@ const Navigation = () => {
               </NavigationMenu>
             </div>
 
-            <Link
-              to="/contato"
-              className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
+            <div
+              onClick={() => handleNavigation("/contato")}
+              className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap cursor-pointer ${
                 isActive("/contato") ? "text-primary" : "text-foreground"
               }`}
             >
               Contato
-            </Link>
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -165,49 +170,49 @@ const Navigation = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col space-y-4 mt-6">
-                <Link to="/" className="flex items-center space-x-1 mb-6">
+                <div onClick={() => handleNavigation("/")} className="flex items-center space-x-1 mb-6 cursor-pointer">
                   <img src={logo} alt="Musique Zona Sul" className="h-8 w-8" />
                   <h2 className="text-xl font-bold gradient-text">Musique Zona Sul</h2>
-                </Link>
+                </div>
                 
                 {navItems.map((item) => (
-                  <Link
+                  <div
                     key={item.href}
-                    to={item.href}
-                    className={`text-sm font-medium py-2 px-3 rounded-md transition-colors ${
+                    onClick={() => handleNavigation(item.href)}
+                    className={`text-sm font-medium py-2 px-3 rounded-md transition-colors cursor-pointer ${
                       isActive(item.href)
                         ? "bg-primary/10 text-primary"
                         : "text-foreground hover:bg-accent"
                     }`}
                   >
                     {item.label}
-                  </Link>
+                  </div>
                 ))}
                 
                 {/* Cursos Mobile */}
                 <div className="border-t pt-4 mt-4">
                   <p className="text-xs font-semibold text-muted-foreground mb-2 px-3">CURSOS</p>
                   {courseItems.map((course) => (
-                    <Link
+                    <div
                       key={course.href}
-                      to={course.href}
-                      className="text-sm font-medium py-2 px-3 rounded-md transition-colors text-foreground hover:bg-accent block"
+                      onClick={() => handleNavigation(course.href)}
+                      className="text-sm font-medium py-2 px-3 rounded-md transition-colors text-foreground hover:bg-accent block cursor-pointer"
                     >
                       {course.label}
-                    </Link>
+                    </div>
                   ))}
                 </div>
 
-                <Link
-                  to="/contato"
-                  className={`text-sm font-medium py-2 px-3 rounded-md transition-colors ${
+                <div
+                  onClick={() => handleNavigation("/contato")}
+                  className={`text-sm font-medium py-2 px-3 rounded-md transition-colors cursor-pointer ${
                     isActive("/contato")
                       ? "bg-primary/10 text-primary"
                       : "text-foreground hover:bg-accent"
                   }`}
                 >
                   Contato
-                </Link>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
