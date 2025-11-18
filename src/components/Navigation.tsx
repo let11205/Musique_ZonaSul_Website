@@ -18,7 +18,7 @@ const Navigation = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { href: "/", label: "Início" },
+    { href: "/", label: "Home" },
     { href: "/sobre", label: "Sobre a Escola" },
   ];
 
@@ -55,12 +55,12 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
                   isActive(item.href) ? "text-primary" : "text-foreground"
                 }`}
               >
@@ -145,7 +145,7 @@ const Navigation = () => {
 
             <Link
               to="/contato"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-primary whitespace-nowrap ${
                 isActive("/contato") ? "text-primary" : "text-foreground"
               }`}
             >
